@@ -15,7 +15,7 @@ class Footer extends React.Component{
                     <p style={{color:"white"}}>Built with <MdHeart fontSize="20px" color="white" beat={true} /> by Rashid &copy; {year}</p>
                 </div>
                 <div>
-                    <LogoGithub onClick={() => this.props.history.push('www.github.com')} fontSize="20px" color="white"/>
+                    <LogoGithub fontSize="20px" color="white"/>
                     <LogoFacebook fontSize="20px" color="white"/>
                     <LogoLinkedin fontSize="20px" color="white"/>
                     <LogoTwitter fontSize="20px" color="white"/>

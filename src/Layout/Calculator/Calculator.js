@@ -13,7 +13,11 @@ class Calculator extends React.Component{
     onButtonPress = event => {
         let equation = this.state.equation;
         const buttonPressed = event.target.innerHTML;
-        this.setState({clicked:'C'});
+        let regexMatch = equation.match(/[-+]?\d*\.?\d*/);
+        this.setState({clicked:buttonPressed === 'AC' ? 'AC' : 'C'});
+        if(regexMatch){
+            this.setState({equation: regexMatch ? regexMatch[0] : ''})
+        }
         if(equation === '' && ['+','-','*','/','%'].indexOf(buttonPressed) !== -1){
             equation += '';
             alert('Enter a number first!')
